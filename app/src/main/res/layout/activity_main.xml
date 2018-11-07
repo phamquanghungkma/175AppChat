@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    
+
+
+
+
+    <ListView
+        android:id="@+id/lisviewUser"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></ListView>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:textColor="#39a2cc"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:textSize="24sp"
+        android:text="Noi dung chat :"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+
+
+    <ListView
+        android:id="@+id/listviewChat"
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></ListView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <EditText
+            android:paddingLeft="20dp"
+            android:hint="Input here"
+            android:id="@+id/editTextContent"
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/imageBtnAdd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/addicon" />
+
+        <ImageButton
+            android:id="@+id/imageBtnSend"
+            android:background="@drawable/send"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
