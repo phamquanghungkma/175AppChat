@@ -17,32 +17,31 @@
         android:id="@+id/lisviewUser"
         android:layout_weight="2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"></ListView>
+        android:layout_height="200dp"></ListView>
 
     <TextView
         android:layout_marginLeft="10dp"
         android:textColor="#39a2cc"
         android:gravity="center_vertical"
-        android:layout_weight="1"
+
         android:textSize="24sp"
         android:text="Noi dung chat :"
         android:layout_width="match_parent"
-        android:layout_height="0dp" />
+        android:layout_height="wrap_content" />
 
 
 
     <ListView
         android:id="@+id/listviewChat"
-        android:layout_weight="6"
+        android:layout_weight="8"
         android:layout_width="match_parent"
-        android:layout_height="0dp"></ListView>
+        android:layout_height="match_parent"></ListView>
 
     <LinearLayout
         android:orientation="horizontal"
-        android:weightSum="10"
-        android:layout_weight="1"
+        android:layout_weight="0.1"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="60dp">
 
         <EditText
             android:paddingLeft="20dp"
@@ -52,12 +51,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent" />
 
-        <ImageButton
-            android:id="@+id/imageBtnAdd"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/addicon" />
+
 
         <ImageButton
             android:id="@+id/imageBtnSend"

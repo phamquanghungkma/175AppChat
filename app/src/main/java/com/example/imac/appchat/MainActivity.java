@@ -2,6 +2,7 @@ package com.example.imac.appchat;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -19,7 +20,7 @@ import java.net.URISyntaxException;
 
 public class MainActivity extends AppCompatActivity {
 
-    private com.github.nkzawa.socketio.client.Socket mSocket;
+
     ListView lvUser , lvChat;
     EditText edtContent;
     ImageButton btnAdd, btnSend;
@@ -32,17 +33,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         AnhXa();
 
-        try {
-            mSocket = IO.socket("http://192.168.2.3:3001");
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-        mSocket.connect();
-        mSocket.on("server-send-data",onRetrieveData);
 
-        mSocket.emit("client-send-data","Lap tring Android");
+//        mSocket.on("server-send-data",onRetrieveData);
+//
+//        mSocket.emit("client-send-data","Lap tring Android");
         // trong do "client-send-data" la ten cua su kien,
         // Lap trinh Android la noi dung se gui len Server
+//
 
     }
 
@@ -53,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = (ImageButton) findViewById(R.id.imageBtnAdd);
         btnSend = (ImageButton) findViewById(R.id.imageBtnSend);
 
+        //ChatClient.getInstance().regist("ten cua nguoi dung";
     }
 
     private Emitter.Listener onRetrieveData = new Emitter.Listener() {
